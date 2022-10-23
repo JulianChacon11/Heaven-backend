@@ -1,6 +1,6 @@
 const router = require('express').Router();
 const CategoriaOperaciones = require('../operaciones/CategoriaOperaciones');
-//Rutas par el CRUD de categorias
+//Rutas para el CRUD de categorias
 router.get('/', CategoriaOperaciones.consultarCategorias);
 router.get('/:id', CategoriaOperaciones.consultarCategoria);
 router.post('/', CategoriaOperaciones.crearCategoria);
