@@ -19,13 +19,13 @@ CatergoriaOperaciones.crearCategoria = async(req,res) => {
 
 /**
  * Metodo para consultar una categoria
- * @param {*} req se recibe el id de la categoria
+ * @param {*} req se recibe el nombre de la categoria
  * @param {*} res si la categoria existe se envia la categoria, si no existe se envia un mensaje
  */
-CatergoriaOperaciones.consultarCategoria = async(req,res) => {
+CatergoriaOperaciones.consultarCategoriaPorNombre = async(req,res) => {
     try{
-        const id = req.params.id;
-        const categoria = await CategoriaModelo.findById(id);
+        const nombre= req.params.nombre;
+        const categoria = await CategoriaModelo.findOne({nombre:nombre});
         if(categoria != null){
             res.status(200).json(categoria);
         }else{
