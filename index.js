@@ -20,4 +20,5 @@ app.get("/", (req, res) => {
   res.send("API is working");
 });
 
-app.use("/categorias", require("./rutas/CategoriaRutas"));
+app.use("/api/categorias", require("./rutas/CategoriaRutas"));
+app.use("/api/productos", require("./rutas/ProductoRutas"));

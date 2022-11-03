@@ -1,3 +1,4 @@
+//Modelo para la tabla de categorias
 const mongoose = require("mongoose");
 const categoriaSchema =  mongoose.Schema({
     nombre: {type: String, maxLenght: 25, unique: true, required: true},
